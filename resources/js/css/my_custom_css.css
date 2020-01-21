@@ -5966,7 +5966,28 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding: 5px;
   text-align: center;
   white-space: nowrap; }
-
+  .mytooltip {
+    padding : 3px;
+  }
+  .mytooltip .mytooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+  }
+  
+  .mytooltip:hover .mytooltiptext {
+    visibility: visible;
+  }
 .noUi-horizontal .noUi-tooltip {
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
@@ -6433,3 +6454,102 @@ td.rdtYear:hover {
   top: 1px;
   border-width: 0 .4rem .4rem .4rem;
   border-bottom-color: #fff; }
+ 
+  
+ 
+  .jumbotron h1 {
+    color: #353535;
+  }
+
+  h2 {
+    color: rgb(10, 10, 10);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .mrng-60-top {
+    margin-top: 60px;
+  }
+  /* Global Button Styles */
+  button.animated-button:link, a.animated-button:visited {
+    position: relative;
+    display: block;
+    margin: 30px auto 0;
+    padding: 14px 15px;
+    color: rgb(236, 42, 42);
+    font-size:14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: .08em;
+    border-radius: 0;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  button.animated-button:link:after, a.animated-button:visited:after {
+    content: "";
+    position: absolute;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    width: 150%;
+    z-index: -1;
+    -webkit-transition: all 0.75s ease 0s;
+    -moz-transition: all 0.75s ease 0s;
+    -o-transition: all 0.75s ease 0s;
+    transition: all 0.75s ease 0s;
+  }
+  button.animated-button:link:hover, a.animated-button:visited:hover {
+    color: #FFF;
+    text-shadow: none;
+  }
+  button.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+    height: 450%;
+  }
+  button.animated-button:link, a.animated-button:visited {
+    position: relative;
+    display: block;
+    margin: 30px auto 0;
+    padding: 14px 15px;
+    color: rgb(8, 8, 8);
+    font-size:14px;
+    border-radius: 0;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: .08em;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+  
+  /* Victoria Buttons */
+
+  button.animated-button.victoria-four {
+    border: 2px solid rgb(10, 10, 10);
+  }
+  button.animated-button.victoria-four:after {
+    background: rgb(10, 10, 10);
+    opacity: .5;
+    -moz-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+    -ms-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+    -webkit-transform: translateY(-50%) translateX(-50%) rotate(90deg);
+    transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  }
+  button.animated-button.victoria-four:hover:after {
+    opacity: 1;
+    height: 600% !important;
+  }
+ 
+
+.custom_question{
+  background-color: rgb(122, 120, 124);font-size: 20px; color: beige; text-align: left;
+}

@@ -11,9 +11,6 @@ import {
   CardText
 } from "reactstrap";
 
-import "../css/bootstrap.min.css";
-import "../css/my_custom_css.css";
-import "../css/my_custom.css";
 
 const items = [
   {

@@ -8,6 +8,27 @@
 
 <!-- Title Page-->
 <title>Dashboard</title>
+<link
+    rel="stylesheet"
+    type="text/css"
+    media="screen"
+    href="{{asset('css/bootstrap.min.css')}}"
+
+/>
+
+<link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="{{asset('css/my_custom_css.css')}}"
+        />
+        <link
+        rel="stylesheet"
+        type="text/css"
+        media="screen"
+        href="{{asset('css/my_custom.css')}}"
+    />
+
 
 </head>
 
@@ -19,7 +40,7 @@
 
 
 
-<div class="page-content--bgf7">
+<div class="">
 
 
 @yield('content')
@@ -29,6 +50,8 @@
 
 <!-- Main JS-->
 <script src="{{asset('js/app.js')}}"></script>
+<script src="https://kit.fontawesome.com/f4d8879ff1.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 </body>
 

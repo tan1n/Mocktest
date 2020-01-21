@@ -6,15 +6,16 @@
 
 require("./bootstrap");
 
+// import "./css/bootstrap.min.css";
+// import "./css/my_custom_css.css";
+// import "./css/my_custom.css";
+
 /**
  * Next, we will create a fresh React component instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require("./components/Example");
-require("./components/Chapter");
 require("./components/Grid");
 require("./components/Navbar");
-require("./components/Profile");
-require("./components/Quiz");
+require("./components/customprofile");

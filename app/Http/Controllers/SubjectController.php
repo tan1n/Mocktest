@@ -37,7 +37,7 @@ class SubjectController extends Controller
 
     public function show($id)
     {
-        $chapters=json_encode($this->subject->chapters($id)->take(10));
+        $chapters=$this->subject->chapters($id)->take(10);
         return view('users.chapters',['chapters'=>$chapters]);
     }
 

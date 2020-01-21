@@ -2,16 +2,12 @@ import { Card, CardBody, CardTitle, CardImg } from "reactstrap";
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "../css/bootstrap.min.css";
-import "../css/my_custom_css.css";
-import "../css/my_custom.css";
-
 const Grid = props => {
     const data = JSON.parse(props.data);
     console.log("data from component", JSON.parse(props.data));
     return (
         <div>
-            <div className="container" style={{ paddingTop: "100px" }}>
+            <div className="container" style={{ marginTop: "100px" }}>
                 <div className="row" style={{ justifyContent: "center" }}>
                     {data.map(item => {
                         return (
@@ -23,17 +19,28 @@ const Grid = props => {
                             >
                                 <Card
                                     style={{
-                                        width: "12rem" //if needed fixed height just add height example
+                                        width: "20rem",
+                                        height: "25rem" //if needed fixed height just add height example
                                         // ,height: "17rem"
                                     }}
                                 >
                                     <CardBody>
                                         <CardImg
                                             top
-                                            src="https://image.flaticon.com/teams/slug/google.jpg"
+                                            src={item.image}
                                             alt="..."
+                                            style={{
+                                                width: "18rem",
+                                                height: "20rem"
+                                            }}
                                         />
-                                        <CardTitle>
+                                        <CardTitle
+                                            style={{
+                                                fontWeight: "bolder",
+                                                fontSize: "22px",
+                                                textAlign: "center"
+                                            }}
+                                        >
                                             <a href={`/subject/${item.id}`}>
                                                 {item.name}
                                             </a>
