@@ -9,6 +9,8 @@ use Crypt;
 
 class ChapterQuestions implements QuestionInterface{
 
+    private $id;
+
     public function __construct($id) {
         $this->id = Crypt::decrypt($id);
     }

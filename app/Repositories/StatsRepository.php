@@ -42,9 +42,9 @@ class StatsRepository{
             if($question->correct_ans==$a) $mark = 1; else $mark = 0;
 
             Stats::create([
-                'chapter_id'=>$question->chapter->id,
-                'subject_id'=>$question->subject->id,
-                'class_id'=>$question->classes->id,
+                'chapter_id'=>$question->chapter_id,
+                'subject_id'=>$question->subject_id,
+                'class_id'=>$question->class_id,
                 'question_id'=>$question->id,
                 'user_id'=>$user_id,
                 'test_id'=>$test_id,
@@ -64,7 +64,7 @@ class StatsRepository{
     public function strongChapter()
     {
         $stat = Stats::select(DB::raw('sum(mark) as $total_mark,chapter_id'))
-                    ->where('user_id',1)
+                    ->where('user_id',Auth::id())
                     ->groupBy('chapter_id')
                     ->with('chapter')
                     ->get()->max();
@@ -75,7 +75,7 @@ class StatsRepository{
     public  function strongSubject()
     {
         $stat = Stats::select(DB::raw('sum(mark) as $total_mark,subject_id'))
-            ->where('user_id',1)
+            ->where('user_id',Auth::id())
             ->groupBy('subject_id')
             ->with('subject')
             ->get()->max();

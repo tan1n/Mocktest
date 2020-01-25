@@ -11,16 +11,19 @@ class QuestionRepository{
     *return Questions from this chapter,except completed questions and  generate 40 questions randomly **/  
     
     private $type;
+    private $total;
 
-
-    public function type($type)
+    public function type($type,$total)
     {
         $this->type=$type;
+        $this->total=$total;
     }
 
     public function generateExcept($completed)
     {
-        return $this->type->getQuestions()->except($completed)->count() >= 40 ? $this->type->getQuestions()->except($completed)->random(40) : $this->type->getQuestions()->except($completed)->shuffle() ;
+        $newQuestions=$this->type->getQuestions()->except($completed);
+
+        return $newQuestions->count() >= $this->total ? $newQuestions->random($this->total) : $newQuestions->shuffle() ;
     }
 
 

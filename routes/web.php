@@ -20,6 +20,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/submit','MocktestController@endMocktest')->name('submit');
 
+    Route::get('/profile/{user}','HomeController@profile')->name('profile');
+
 });
 
 Route::group(['prefix' => 'admin'], function () {

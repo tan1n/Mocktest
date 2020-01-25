@@ -22,7 +22,9 @@ class MocktestController extends Controller
     //Start a Mocktest 
     public function startMocktest(Request $request)
     {
-        $this->questions->type(new ChapterQuestions($request->id));
+        $chapterQuestions=new ChapterQuestions($request->id);
+
+        $this->questions->type($chapterQuestions,20);
 
         $completed = $this->stats->completedQuestions($request->id);
 

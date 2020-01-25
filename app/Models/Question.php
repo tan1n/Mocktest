@@ -4,11 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Auth;
 
 class Question extends Model
 {
-    protected $table='questions';
+    protected $table='questions_test';
     protected $guarded=[];
 
     public function chapter()
@@ -18,12 +17,12 @@ class Question extends Model
 
     public function subject()
     {
-        return $this->chapter->subject();
+        return $this->belongsTo(Subject::class,'subject_id');
     }
 
-    public function classes()
+    public function class()
     {
-        return $this->subject->classes();
+        return $this->belongsTo(Classes::class,'class_id');
     }
 
 

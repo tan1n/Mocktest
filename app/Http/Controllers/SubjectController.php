@@ -2,22 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Subject;
 use Illuminate\Http\Request;
 
-use App\Repositories\SubjectRepository;
-
-use Crypt;
 
 class SubjectController extends Controller
 {
-
-    private  $subject;
-
-    public function __construct(SubjectRepository $subject) {
-        $this->subject = $subject;
-        // $this->middleware('decryptor');
-    }
-
 
     public function index()
     {
@@ -29,15 +19,15 @@ class SubjectController extends Controller
         //
     }
 
-
     public function store(Request $request)
     {
         //
     }
 
-    public function show($id)
+    public function show(Subject $subject)
     {
-        $chapters=$this->subject->chapters($id)->take(10);
+        $chapters=$subject->chapters()->paginate(10);
+
         return view('users.chapters',['chapters'=>$chapters]);
     }
 
