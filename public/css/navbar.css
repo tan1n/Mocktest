@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+header {
+    color: #ebebd3;
+    position: relative;
+    padding: 1em 0;
+    margin-top: 25px;
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 10px;
+    border: 2px solid gold;
+}
+
+header::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+header ul li a:hover,.active{
+    border-radius: 10px;
+    background-image: linear-gradient(90deg, #fec22f, #ea9826);
+}
+
+.logo {
+    float: left;
+    font-size: 1rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.logo span {
+    font-weight: 400;
+}
+
+.main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #464655;
+    height: 0;
+    overflow: hidden;
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav li {
+    border-bottom: 1px solid #575766;
+}
+
+.main-nav li:last-child {
+    border-bottom: none;
+}
+
+
+.main-nav a {
+    color: white;
+    display: block;
+    padding: 1em 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-icon {
+    display: inline-block;
+    font-size: 1.3em;
+    margin-right: .5em;
+    text-align: center;
+    width: 1.1em;
+    color: rgba(255,255,255,0.45);
+}
+
+
+
+
+.main-nav {
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+}
+
+.main-nav li {
+    display: inline-block;
+    border: none;
+}
+
+.main-nav a {
+    margin-left: 2em;
+}
+
+
+.nav-icon {
+    display: none;
+}
+
+

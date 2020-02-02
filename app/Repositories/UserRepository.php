@@ -14,7 +14,7 @@ class UserRepository {
 
     public function subjects()
     {
-        return $this->user->findOrFail(Auth::id())->subscription->package->classes->subjects;
+        return $this->user->findOrFail(Auth::id())->subscription->package->classes->subjects();
     }
 
 }

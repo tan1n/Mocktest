@@ -1,9 +1,7 @@
-@extends('layouts.user')
+@extends('layouts.test')
 
 
 @section('content')
-
-
 
     <form action="{{route('submit')}}" method="post">
     @csrf
@@ -32,9 +30,7 @@
                    <span> {{$question->correct_ans}}  <input type="radio" name="question[Q{{$question->id}}]"   value="{{$question->correct_ans}}"></span>
                     </div>
                 </div>
-                
             </div>
-       
     @endforeach
         <div class='row mb-5'>
             <button type='submit' class='btn btn-success btn-block'>Finish</button>

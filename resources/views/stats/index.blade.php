@@ -1,7 +1,6 @@
 @extends('layouts.user')
 
 @section('content')
-
     <section class="statistic statistic2">
         <div class="container">
             <div class="row">

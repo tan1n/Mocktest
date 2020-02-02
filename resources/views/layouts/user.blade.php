@@ -1,58 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
 
-<head>
-<!-- Required meta tags-->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<!-- Title Page-->
-<title>Dashboard</title>
-<link
-    rel="stylesheet"
-    type="text/css"
-    media="screen"
-    href="{{asset('css/bootstrap.min.css')}}"
+    <!-- Title Page-->
+    <title>@yield('title')</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/navbar.css')}}"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/main.css')}}"/>
+    @section('css')@show
+    </head>
 
-/>
-
-<link
-            rel="stylesheet"
-            type="text/css"
-            media="screen"
-            href="{{asset('css/my_custom_css.css')}}"
-        />
-        <link
-        rel="stylesheet"
-        type="text/css"
-        media="screen"
-        href="{{asset('css/my_custom.css')}}"
-    />
+    <body>
 
 
-</head>
+    <div class="container">
+        @include('users.menu')
 
-<body class="animsition">
-<div class="page-wrapper">
+        @yield('content')
+    </div>
 
-@include('users.menu')
+    <script src="{{asset('js/app.js')}}"></script>
+    <script src="https://kit.fontawesome.com/f4d8879ff1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
+    </body>
 
+    <script>
+        function logout()
+        {
+            var form=document.getElementById('logout');
+            form.submit();
+        }
 
-
-<div class="">
-
-
-@yield('content')
-
-</div>
-
-
-<!-- Main JS-->
-<script src="{{asset('js/app.js')}}"></script>
-<script src="https://kit.fontawesome.com/f4d8879ff1.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
-</body>
+    </script>
 
 </html>
